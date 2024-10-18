@@ -1,0 +1,425 @@
+//Global Color
+$primary-color: #fe538d;
+$secondary-color: #FFB703;
+$text-color: #000;
+$text-white: #FFFFFF;
+$dark-background: #222725;
+$light-backgroung: #9e9b9b;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body{
+    font-family: "Rubik", sans-serif;
+}
+
+h1{
+    font-size: 4.5em;
+}
+
+h2{
+    font-size: 3em;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+p{
+    font-size: 1.2em;
+}
+
+ul{
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: $text-color;
+    &:hover{
+        color: $primary-color;
+    }
+}
+
+.bg-light{
+    background-color: $light-backgroung;
+}
+
+.section-header{
+    span{
+        color: $primary-color;
+        font-size: 1.2em;
+        padding-bottom: 10px;
+        display: block;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+}
+
+header{
+    nav{
+        .nav-link{
+            text-transform: uppercase;
+            color: $text-color;
+            font-size: 1em;
+            font-weight: 500;
+            margin-left: 20px;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+        .logo{
+            text-transform: uppercase;
+            font-size: 1em;
+            font-weight: 500;
+            span{
+                color: $primary-color;
+            }
+
+        }
+
+    }
+}
+
+.small{
+    padding: 10px 15px;
+}
+
+.large{
+    padding: 15px 20px;
+}
+
+.btn-primary{
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    &:hover{
+        background-color: $secondary-color;
+        border: 1px solid $secondary-color;
+    }
+}
+
+.btn-secondary{
+    background-color: $secondary-color;
+    border: 1px solid $secondary-color;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    &:hover{
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+    }
+}
+
+footer{
+    background-color: $dark-background;
+    color: $text-white;
+    h3{
+        font-size: 1.5em;
+        color: $secondary-color;
+    }
+    ul{
+        li{
+            padding: 5px 0;
+        }
+    }
+    a{
+        color: $text-white;
+        font-size: 1.2em;
+        text-decoration: none;
+
+    }
+}
+
+.section-1{
+    .hero{
+        background: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+        url('../images/hero.jpg');        min-height: 800px;
+        color: $text-white;
+        span{
+            color: $secondary-color;
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+
+    }
+}
+
+.section-2{
+    img{
+        border-radius: 40px;
+    }
+    span{
+        color: $primary-color;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+        font-weight: 500;
+    }
+}
+
+.section-3 {
+    .item {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 20px;
+      border-radius: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      
+      &:hover {
+        .service-body {
+          transform: translateY(0%);
+          .service-content {
+            opacity: 1;
+          }
+        }
+      }
+      
+      .service-image {
+        position: relative;
+        overflow: hidden;
+        
+        img {
+          width: 100%;
+          border-radius: 10px;
+          aspect-ratio: 1 / 1.2;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+        
+        &:hover img {
+          transform: scale(1.05);
+        }
+        
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          border-radius: 10px;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+        }
+      }
+      
+      .service-body {
+        color: white;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        transform: translateY(80%);
+        transition: all 0.4s ease-in-out;
+      }
+      
+      .service-content {
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+      }
+    }
+}  
+
+.section-4{
+    .card{
+        border-radius: 40px;
+        margin-bottom: 20px;
+    }
+    .row {
+        display: flex;
+        justify-content: center;
+        gap: 30px; // Space between the columns
+      }
+}
+
+.section-5{
+    .swiper{
+        padding: 25px 25px 50px 25px;
+        .swiper-pagination-bullet-active{
+            background-color: $secondary-color;
+        }
+    }
+    .card{
+        border-radius: 40px;
+        .card-body{
+            .rating{
+                color: $secondary-color;
+            }
+        }
+        .content{
+            p{
+                font-size: 1em;
+            }
+        }
+        .meta{
+            img{
+                border-radius: 50%;
+            }
+        }
+        .name{
+            font-size: 1.3em;
+            font-weight: 500;
+        }
+    }
+}
+
+.section-6 {
+    .card {
+      border-radius: 40px;
+      img {
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+      }
+      .card-body {
+        a.title {
+          font-size: 1.4em;
+        }
+      }
+    }
+  
+    // Centering the cards with space on both sides
+    .container {
+      max-width: 1200px; // Ensures that the content is not stretched
+    }
+  
+    .row {
+      display: flex;
+      justify-content: center;
+      gap: 30px; // Space between the columns
+    }
+  
+    .col-md-3 {
+      flex: 0 0 30%; // Ensures three columns fit in the same row
+    }
+}
+
+.section-7{
+    .hero{
+        background: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url('../images/hero.jpg');
+        min-height: 500px;
+        color: $text-white;
+        span{
+            color: $secondary-color;
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+
+    }
+}
+
+.section-8{
+    .card{
+        border-radius: 40PX;
+        img{
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+        }
+        .card-body{
+            a.title{
+                font-size: 1.4em;
+            }
+        }
+        .card-title{
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+        .card-sub-title{
+            font-size: 1.3em;
+            color: $light-backgroung;
+        }
+    }
+}
+
+.section-9{
+    .card{
+        border-radius: 40px;
+        .card-body{
+            
+        }
+    }
+}
+
+.login-form{
+    .card{
+        width: 450px;
+
+    }
+}
+
+.dashboard{
+    .card{
+        min-height: 400px;
+    }
+}
+  
+
+.sidebar{
+    ul{
+        li{
+            a{
+                display: block;
+                padding: 10px 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+            }
+        }
+    }
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------
+// css for .service-body
+.btn1 {
+    display: inline-block;
+    padding: 0.5rem 1rem; /* Padding for button size */
+    font-size: 0.875rem; /* Font size */
+    font-weight: 500; /* Font weight */
+    border-radius: 0.25rem; /* Rounded corners */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.btn-primary1 {
+    background-color: #FFB703; /* Primary color */
+    color: #0f0f0fe8; /* Text color */
+    border: none; /* No border */
+}
+
+.btn-primary1:hover {
+    background-color: #fe538d; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.btn-secondary1 {
+    background-color: #fe538d; /* Secondary color */
+    color: #0f0f0fe8; /* Text color */
+    border: none; /* No border */
+}
+
+.btn-secondary1:hover {
+    background-color: #FFB703; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Button size adjustments for smaller buttons */
+.btn1-sm {
+    padding: 0.25rem 0.5rem; /* Smaller padding */
+    font-size: 0.75rem; /* Smaller font size */
+}
+
+/* Optional: Add margin to separate buttons */
+.ms1-2 {
+    margin-left: 0.5rem; /* Add left margin */
+}
+
+.confirmation-message {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
